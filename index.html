@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MyStore</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Venzora Shopping Mall 🛍️</h1>
+        <p>Shop Smart. Live Better.</p>
+        <button onclick="scrollToShop()">Shop Now</button>
+    </section>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">🛒 <span>MyStore</span></div>
+
+        <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()" />
+
+        <nav class="nav-links">
+            <a onclick="filterProducts('all')">All</a>
+            <a onclick="filterProducts('electronics')">Electronics</a>
+            <a onclick="filterProducts('men')">Men</a>
+            <a onclick="filterProducts('women')">Women</a>
+            <a onclick="filterProducts('kids')">Kids</a>
+            <a onclick="filterProducts('decor')">Decor</a>
+        </nav>
+    </header>
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+        <div id="products" class="products"></div>
+
+        <div class="cart">
+            <h2>🛒 Cart</h2>
+            <ul id="cart-items"></ul>
+
+            <div class="bill">
+                <p>Total: ₹<span id="total">0</span></p>
+                <p class="discount">Discount: ₹<span id="discount">0</span></p>
+                <h3>Payable: ₹<span id="payable">0</span></h3>
+            </div>
+
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Venzora Shopping Mall ❤️ Shop Smart👗 . Live Better.
+    </footer>
+
+    <div id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
